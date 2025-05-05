@@ -101,6 +101,22 @@
       </Category>
       <Path>custom_func.c</Path>
       <Path>misc_config.c</Path>
+      <Category Name="nr_micro_shell">
+        <Category Name="inc">
+          <Path>nr_micro_shell\inc\ansi.h</Path>
+          <Path>nr_micro_shell\inc\ansi_def.h</Path>
+          <Path>nr_micro_shell\inc\ansi_port.h</Path>
+          <Path>nr_micro_shell\inc\nr_micro_shell.h</Path>
+          <Path>nr_micro_shell\inc\nr_micro_shell_config.h</Path>
+        </Category>
+        <Category Name="src">
+          <Path>nr_micro_shell\src\ansi.c</Path>
+          <Path>nr_micro_shell\src\ansi_port.c</Path>
+          <Path>nr_micro_shell\src\nr_micro_shell.c</Path>
+          <Path>nr_micro_shell\src\SConscript</Path>
+        </Category>
+      </Category>
+      <Path>nr_micro_shell_commands.c</Path>
     </Files>
     <DebugOptions>
       <ConnectSettings>
@@ -134,8 +150,13 @@
           <Path>DefaultBuild\r_cg_sau_common.obj</Path>
           <Path>DefaultBuild\Config_INTC.obj</Path>
           <Path>DefaultBuild\Config_INTC_user.obj</Path>
+          <Path>DefaultBuild\nr_micro_shell_commands.obj</Path>
+          <Path>DefaultBuild\ansi.obj</Path>
+          <Path>DefaultBuild\ansi_port.obj</Path>
+          <Path>DefaultBuild\nr_micro_shell.obj</Path>
         </LinkOrder>
         <CommonOptions>
+          <IncludePathForC>nr_micro_shell\inc</IncludePathForC>
           <IncludePathForC>src\smc_gen\Config_INTC</IncludePathForC>
           <IncludePathForC>src\smc_gen\Config_UART0</IncludePathForC>
           <IncludePathForC>src\smc_gen\r_pincfg</IncludePathForC>
@@ -162,6 +183,7 @@
           <Option>-g</Option>
           <Option>-g_line</Option>
           <Option>-Onothing</Option>
+          <Option>-I nr_micro_shell\inc</Option>
           <Option>-I src\smc_gen\Config_INTC</Option>
           <Option>-I src\smc_gen\Config_UART0</Option>
           <Option>-I src\smc_gen\r_pincfg</Option>
