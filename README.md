@@ -1,0 +1,2 @@
+# RL78_F24_UART_nr_micro_shell
+RL78_F24_UART_nr_micro_shell
